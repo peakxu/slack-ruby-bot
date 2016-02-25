@@ -2,7 +2,7 @@ module SlackRubyBot
   module Loggable
     extend ActiveSupport::Concern
 
-    class_methods do
+    module ClassMethods
       def logger
         @logger ||= begin
           $stdout.sync = true
